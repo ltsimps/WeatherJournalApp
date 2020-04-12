@@ -1,111 +1,150 @@
-body{
-    background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Hind+Siliguri|Josefin+Sans:700|Overpass&display=swap");
+
+body {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(70, 150, 252, 1) 100%
+  );
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-#app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: minmax(200px, auto);
+  grid-template-areas:
+    "hd"
+    "zip"
+    "fl"
+    "gen"
+    "ent";
 }
 
-.holder{
+#app {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(21, 72, 125, 1) 87%,
+    rgba(0, 212, 255, 1) 100%
+  );
 
+  color: black;
+  grid-gap: 1em;
+  font-size: 20px;
+  font-family: "Hind Siliguri", sans-serif;
+  border: 6px solid black;
+  border-radius: 5%;
+  line-height: 2.5em;
 }
 
-.entry{
-    background: rgba(59, 74, 107, .4);
+.holder {
+  margin: 20px auto;
 }
 
-#entryHolder{
-
+.entry {
+  width: 80%;
+  margin: 20px auto;
+  grid-area: ent;
+  padding: 30px 20px 100px 20px;
+  border: 2px solid black;
+  background-color: whitesmoke;
 }
 
-#date{
-
+#entryHolder {
+  color: black;
 }
 
-#temp{
-
+#date {
+  color: firebrick;
+  font-weight: bold;
 }
 
-#content{
+#temp {
+  color: firebrick;
+  font-weight: bolder;
+}
 
+#content {
+  color: firebrick;
+  font-weight: bolder;
 }
 
 .headline {
-
-}
-.title{
-
+  grid-area: hd;
+  padding-left: 30px;
 }
 
-/*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
-    font-size: 27px;
+.zip {
+  grid-area: zip;
 }
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
+.feel {
+  grid-area: fl;
 }
 
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
-}
-h1{
-    font-size: 36px;
+.generate-button {
+  grid-area: gen;
 }
 
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+#generate {
+  color: whitesmoke;
+}
+.title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 30px;
+  color: #3b4a6b;
+}
+
+label {
+  display: block;
+  font-size: 27px;
+  color: whitesmoke;
+}
+
+input {
+  display: block;
+  height: 60px;
+  width: 320px;
+  background: whitesmoke;
+  color: firebrick;
+  font-size: 20px;
+  font-family: "Overpass", sans-serif;
+  border: 1px solid black;
+}
+
+button {
+  width: 400px;
+  height: 100px;
+  background: #3b4a6b;
+  color: #2b8039;
+  font-size: 26px;
+  font-family: "Overpass", sans-serif;
+  border: none;
+  box-shadow: 2px 4px 5px #444;
+}
+h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 50px;
+  color: firebrick;
+}
+
+textarea {
+  background: whitesmoke;
+  color: firebrick;
+
+  font-size: 20px;
+  font-family: "Overpass", sans-serif;
+  border: 1px solid black;
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    outline: none;
+  outline: none;
 }
-/* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
-  
-::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
